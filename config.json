@@ -46,13 +46,6 @@
                             "type": "websocket"
                         }
                     }
-                },
-                {
-                    "type": "websocket",
-                    "endpoint": {
-                        "type": "tcp",
-                        "port": "$PORT"
-                    }
                 }
             ]
         }
