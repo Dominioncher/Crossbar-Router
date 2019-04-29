@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "controller": {},
     "workers": [
         {
             "type": "router",
@@ -21,8 +20,8 @@
                                         "subscribe": true
                                     },
                                     "disclose": {
-                                        "caller": true,
-                                        "publisher": true
+                                        "caller": false,
+                                        "publisher": false
                                     },
                                     "cache": true
                                 }
@@ -41,17 +40,18 @@
                     "paths": {
                         "/": {
                             "type": "static",
-                            "directory": "../web",
-                            "options": {
-                                "enable_directory_listing": true
-                            }
-                        },
-                     "info": {
-                                "type": "nodeinfo"
+                            "directory": "../web"
                         },
                         "ws": {
                             "type": "websocket"
                         }
+                    }
+                },
+                {
+                    "type": "websocket",
+                    "endpoint": {
+                        "type": "tcp",
+                        "port": 9000
                     }
                 }
             ]
