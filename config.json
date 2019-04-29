@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "controller": {},
     "workers": [
         {
             "type": "router",
@@ -21,8 +20,8 @@
                                         "subscribe": true
                                     },
                                     "disclose": {
-                                        "caller": true,
-                                        "publisher": true
+                                        "caller": false,
+                                        "publisher": false
                                     },
                                     "cache": true
                                 }
@@ -36,22 +35,47 @@
                     "type": "web",
                     "endpoint": {
                         "type": "tcp",
-                        "port": 8080
+                        "port": "$PORT"
                     },
                     "paths": {
                         "/": {
                             "type": "static",
-                            "directory": "../web",
-                            "options": {
-                                "enable_directory_listing": true
-                            }
-                        },
-                     "info": {
-                                "type": "nodeinfo"
+                            "directory": "../web"
                         },
                         "ws": {
                             "type": "websocket"
                         }
+                    }
+                },
+                {
+                    "type": "websocket",
+                    "endpoint": {
+                        "type": "tcp",
+                        "port": 9000
+                    }
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "options": {
+                "pythonpath": [
+                    ".."
+                ]
+            },
+            "components": [
+                {
+                    "type": "class",
+                    "classname": "hello.AppSession",
+                    "realm": "realm1",
+                    "transport": {
+                        "type": "websocket",
+                        "endpoint": {
+                            "type": "tcp",
+                            "host": "127.0.0.1",
+                            "port": 9000
+                        },
+                        "url": "ws://127.0.0.1:9000/ws"
                     }
                 }
             ]
