@@ -1,3 +1,4 @@
+pywin32==224
 argh==0.26.2
 argon2-cffi==19.1.0
 asn1crypto==0.24.0
@@ -45,7 +46,6 @@ pypiwin32==223
 PyQRCode==1.2.1
 python-snappy==0.5.4
 PyTrie==0.3.1
-pywin32==224
 PyYAML==5.1
 requests==2.21.0
 sdnotify==0.3.2
