@@ -8,7 +8,7 @@ crossbar==0.15.0
 enum34==1.1.6
 idna==2.1
 ipaddress==1.0.17
-Jinja2==2.8
+Jinja2==2.10.1
 lmdb==0.92
 MarkupSafe==0.23
 netaddr==0.7.18
