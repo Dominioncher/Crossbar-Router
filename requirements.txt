@@ -1,1 +1,2 @@
+autobahn==19.2.1
 crossbar==19.2.1
