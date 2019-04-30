@@ -1,3 +1,3 @@
-Crossbar Router Test Heroku Application
+Crossbar Router Heroku
 
 https://crossbar-wamp-router.herokuapp.com/info
