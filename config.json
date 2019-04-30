@@ -42,6 +42,9 @@
               "type": "static",
               "directory": "../web"
             },
+            "info": {
+              "type": "nodeinfo"
+            },
             "ws": {
               "type": "websocket"
             }
